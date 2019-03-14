@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import com.haleyhuxley.artgallery.tables.AdminManager;
 import com.haleyhuxley.artgallery.tables.ArtistManager;
+import com.haleyhuxley.artgallery.tables.ArtworkManager;
 
 public class Main {
 
@@ -11,6 +12,7 @@ public class Main {
 				
 		AdminManager.displayRows();
 		ArtistManager.displayRows();
+		ArtworkManager.displayRows();
 		
 	}
 
