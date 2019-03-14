@@ -12,25 +12,25 @@ public class DBUtil {
 
 	public static final String USERNAME = "dbuser";
 	public static final String PASSWORD = "dbpassword";
-	public static final String CONN_STRING = "jdbc:mysql://localhost/explorecalifornia";
+	public static final String CONN_STRING = "jdbc:mysql://localhost/artgallery";
 	
-	/*
-	 * <summary>Creates a connection to the database.</summary>
-	 * <params>None.</params>
-	 * <returns>A Connection object that makes a connection the database.</returns>
-	 */
-	
+	/*  Function to create a connection to the database. */
 	public static Connection getConnection() {
 		
-		/* Variable that holds the connection. */
 		try {
-			System.out.println("Connection successful");
 			return DriverManager.getConnection(CONN_STRING, USERNAME, PASSWORD);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	/* Function to show detailed SQL errors. */
+	public static void showException(SQLException e) {
+		System.err.println("Error message: " + e.getMessage());
+		System.err.println("Error code: " + e.getErrorCode());
+		System.err.println("SQL state: " + e.getSQLState());
 	}
 	
 }
