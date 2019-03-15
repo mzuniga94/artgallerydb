@@ -1,4 +1,4 @@
-USE `artgallery`;
+USE `artgallerydb`;
 
 --
 -- Drop tables if they already exist
